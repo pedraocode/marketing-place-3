@@ -25,7 +25,7 @@ body {
 
 .minicaixa {
     width: 307px;
-    height: 206px;
+    height: 276px;
     padding-bottom: 24px;
     padding-left: 24px;
     padding-top: 24px;
@@ -47,10 +47,12 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    margin-top: -265px;
+    margin-top: -325px;
     margin-left: 20px;
 }
-
+a {
+    text-decoration: none;
+}
 .junto, .junto2, .junto3 {
     display: flex;
     align-items: flex-start; 
@@ -67,13 +69,25 @@ body {
     border-radius: 10px;
     border: none;
 }
+.two {
+    position: relative;
+    width: 328px; /* Ajuste conforme necessário */
+}
 
 input {
     border: none;
     border-bottom: 2px solid #ADADAD;
     max-width: 279px;
+    margin-top: 23px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 50px;
+    height: 32px;
 }
-
+.svg {
+    position: absolute;
+margin-top: 25px;
+}
 .cor {
     color: #666666;
 }
@@ -182,15 +196,14 @@ h3 {
 
 @media (max-width: 1578px) {
 
-.topo {
-
-    margin-left: 0;
-}
     
 
     .minicaixa {
         width: 100%; 
         max-width: 327px; 
+        justify-content: center;
+
+       
     }
 
     .caixas {
@@ -198,7 +211,6 @@ h3 {
     }
 
     .caixa {
-        margin-left: 0;
         padding: 0 10px; 
         max-width: 321px; 
         margin-bottom: 10px; 
@@ -211,28 +223,30 @@ h3 {
 
     @media (max-width: 900px) {
         .topo {
-            margin-left: 0;
-            justify-content: flex-start; /* Alinha tudo à esquerda */
+
+            justify-content: left; /* Alinha tudo à esquerda */
             flex-wrap: wrap; /* Permite que os elementos se empilhem em várias linhas, se necessário */
             gap: 10px; /* Reduz o espaço entre os elementos no topo */
         }
     
         .centrer {
             flex-direction: column; /* Empilha os botões Dashboard e Produtos verticalmente */
-            align-items: flex-start; /* Alinha os botões à esquerda */
+            align-items: left; /* Alinha os botões à esquerda */
         }
     
         .right-section {
           
             gap: 10px;
-            margin-left: 0;
+
         }
-    
+    .minicaixa {
+        padding-right: 10px;
+    }
         .oi, .ai, .ei {
             width: 100%;
             max-width: 200px; /* Ajusta o tamanho dos botões para caber em telas menores */
             text-align: left; /* Alinha o texto do botão à esquerda */
-            margin-left: 0; /* Garante que não há margem à esquerda */
+ /* Garante que não há margem à esquerda */
         }
     
         .user {
@@ -241,20 +255,20 @@ h3 {
         }
     
         .chato, .acaba {
-            margin-left: 0;
+
             padding: 0 10px;
         }
     
         .caixas {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; 
+            align-items: left; 
             padding-left: 10px;
-            margin-left: 0;
+            
         }
     
         .caixa {
-            margin-left: 0;
+
             margin-right: 10px; 
             padding: 0 10px;
             max-width: none;
@@ -263,24 +277,29 @@ h3 {
         .junto, .junto2, .junto3 {
             display: flex;
             flex-direction: column; 
-            align-items: flex-start;
+            align-items: left;
         }
     }
 
 @media (max-width: 720px) {
     .minicaixa {
         width: 100%; 
+padding-right: 20px;
+        margin-left: -40px;
+        align-items: start;    
+    text-align: left;
     }
 
     .caixa {
-        margin-left: 0;
+margin-left: -40px;
         padding: 0 10px; 
         max-width: none; 
+        align-items: start; 
     }
 
     .junto, .junto2, .junto3 {
         flex-direction: column; 
-        align-items: flex-start; 
+        align-items: left; 
     }
 
     .botan {
